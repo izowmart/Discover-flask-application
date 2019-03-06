@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block  body %}
+    <h1>{{article.title}}</h1>
+    <small> Written by {{article.author.username}} on {{article.date_created}} Modified on {{article.date_modified}}</small>
+    <hr>
+    <div>
+        <!--the pipe character eliminates the html characters-->
+        {{article.body | safe}}
+    </div>
+
+{% endblock %}
